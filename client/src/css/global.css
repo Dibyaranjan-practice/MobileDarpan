@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "SF Pro Display Regular";
+  src: url("./fonts/SFProDisplay-Regular.woff2") format("woff2"), url("./fonts/SFProDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "SF Pro Display Medium";
+  src: url("./fonts/SFProDisplay-Medium.woff2") format("woff2"), url("./fonts/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "SF Pro Display Bold";
+  src: url("./fonts/SFProDisplay-Bold.woff2") format("woff2"), url("./fonts/SFProDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+* {
+  font-family: "SF Pro Display Regular";
+  font-size: 1rem; }
+
+.grey-100 {
+  background-color: #f5f5f5; }
+
+.black {
+  background-color: #2e2e2e; }
+
+.font-size-base {
+  font-size: 1rem; }
+
+.white {
+  color: #fff; }
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: left; }
+  .icon.lg {
+    height: 32px;
+    width: 32px; }
+  .icon.search-icon {
+    background-image: url("../images/svg/Search.svg");
+    background-position: 16px center; }
+  .icon.wishlist {
+    background-image: url("../images/svg/Favorites.svg"); }
+  .icon.cart {
+    background-image: url("../images/svg/Cart.svg"); }
+  .icon.profile {
+    background-image: url("../images/svg/User.svg"); }
+  .icon.Phones {
+    background-image: url("../images/svg/Phones.svg"); }
+  .icon.Computers {
+    background-image: url("../images/svg/Computers.svg"); }
+  .icon.Smart {
+    background-image: url("../images/svg/smartwatch.svg"); }
+  .icon.Cameras {
+    background-image: url("../images/svg/Cameras.svg"); }
+  .icon.Headphones {
+    background-image: url("../images/svg/Headphones.svg"); }
+  .icon.Gaming {
+    background-image: url("../images/svg/Gaming.svg"); }
+
+.header-wrapper li a {
+  color: rgba(0, 0, 0, 0.3); }
+  .header-wrapper li a.active {
+    font-family: "SF Pro Display Bold";
+    color: black; }
+
+.sub-nav .sub-nav-wrapper li:last-of-type a::after {
+  display: none; }
+
+.sub-nav .sub-nav-wrapper li a::after {
+  content: "";
+  background-color: #fff;
+  display: inline-block;
+  width: 1px;
+  height: 24px;
+  margin: 0rem 3.85rem; }

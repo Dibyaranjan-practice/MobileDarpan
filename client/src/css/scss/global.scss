@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "SF Pro Display Regular";
+  src: url("./fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("./fonts/SFProDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Medium";
+  src: url("./fonts/SFProDisplay-Medium.woff2") format("woff2"),
+    url("./fonts/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display Bold";
+  src: url("./fonts/SFProDisplay-Bold.woff2") format("woff2"),
+    url("./fonts/SFProDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+// variables for font families
+$font-regular: "SF Pro Display Regular";
+$font-medium: "SF Pro Display Medium";
+$font-bold: "SF Pro Display Bold";
+
+//General CSS
+* {
+  font-family: $font-regular;
+  font-size: 1rem;
+}
+
+// Path for SVG
+$svg-path: "../images/svg/";
+// color variables
+$grey-100: #f5f5f5;
+$black: #2e2e2e;
+$white: #fff;
+
+.grey-100 {
+  background-color: $grey-100;
+}
+
+.black {
+  background-color: $black;
+}
+
+.font-size-base {
+  font-size: 1rem;
+}
+
+.white {
+  color: $white;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: left;
+  &.lg {
+    height: 32px;
+    width: 32px;
+  }
+  &.search-icon {
+    background-image: url($svg-path + "Search.svg");
+    background-position: 16px center;
+  }
+  &.wishlist {
+    background-image: url($svg-path + "Favorites.svg");
+  }
+  &.cart {
+    background-image: url($svg-path + "Cart.svg");
+  }
+  &.profile {
+    background-image: url($svg-path + "User.svg");
+  }
+  &.Phones {
+    background-image: url($svg-path + "Phones.svg");
+  }
+  &.Computers {
+    background-image: url($svg-path + "Computers.svg");
+  }
+  &.Smart {
+    background-image: url($svg-path + "smartwatch.svg");
+  }
+  &.Cameras {
+    background-image: url($svg-path + "Cameras.svg");
+  }
+  &.Headphones {
+    background-image: url($svg-path + "Headphones.svg");
+  }
+  &.Gaming {
+    background-image: url($svg-path + "Gaming.svg");
+  }
+}
+
+.header-wrapper {
+  li {
+    a {
+      color: rgba(0, 0, 0, 0.3);
+      &.active {
+        font-family: $font-bold;
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+  }
+}
+
+.sub-nav {
+  .sub-nav-wrapper {
+    li {
+      &:last-of-type {
+        a {
+          &::after {
+            display: none;
+          }
+        }
+      }
+      a {
+        &::after {
+          content: "";
+          background-color: $white;
+          display: inline-block;
+          width: 1px;
+          height: 24px;
+          margin: 0rem 3.85rem;
+        }
+      }
+    }
+  }
+}
