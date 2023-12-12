@@ -4,12 +4,18 @@ exports.getAddBanner = (req, res) => {
   res.render("Banners/addBanner");
 };
 
-exports.postAddBanner = (req, res) => {
-  BannerModel.create({ ...req.body, bannerUrl: req.file.filename })
-    .then(() => console.log("success"))
-    .catch((error) => console.log("Failed to save", error));
-  console.log(req.body);
-  console.log(req.file.filename);
+exports.postAddBanner = async (req, res) => {
+  req.body.topBanner = req.body.topBanner == "on";
+  if (req.body.topBanner) {
+    await BannerModel.findOneAndUpdate(
+      { topBanner: req.body.topBanner },
+      { ...req.body, bannerUrl: req.file.filename }
+    );
+  } else {
+    await BannerModel.create({ ...req.body, bannerUrl: req.file.filename })
+      .then(() => console.log("success"))
+      .catch((error) => console.log("Failed to save", error));
+  }
   res.render("Banners/addBanner");
 };
 
