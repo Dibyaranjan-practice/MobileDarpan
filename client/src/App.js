@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import Profile from "./components/Profile";
 import Wishlist from "./components/Wishlist";
+import Footer from "./components/main/Footer";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <Footer />
     </>
   );
 }

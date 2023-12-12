@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 export default function header() {
   return (
     <header>
-      <div className="header-wrapper w-[100%] py-[1rem] container mx-auto">
+      <div className="header-wrapper w-[100%] p-[1rem] container mx-auto">
         <ul className="flex items-center w-[100%] justify-center">
           <li>
             <img src={logo} alt="cyber" />
@@ -58,44 +58,46 @@ export default function header() {
         </ul>
       </div>
       <div className="sub-nav w-[100%] black py-[0.5rem]">
-        <ul className="sub-nav-wrapper flex justify-center items-center">
-          <li>
-            <Link className="white opacity-50 flex items-center">
-              <span className="icon lg Phones"></span>
-              Phones
-            </Link>
-          </li>
-          <li>
-            <Link className="white opacity-50 flex items-center">
-              <span className="icon lg Computers"></span>
-              Computers
-            </Link>
-          </li>
-          <li>
-            <Link className="white opacity-50 flex items-center">
-              <span className="icon lg Smart"></span>
-              Smart Watches
-            </Link>
-          </li>
-          <li>
-            <Link className="white opacity-50 flex items-center">
-              <span className="icon lg Cameras"></span>
-              Cameras
-            </Link>
-          </li>
-          <li>
-            <Link className="white opacity-50 flex items-center">
-              <span className="icon lg Headphones"></span>
-              Headphones
-            </Link>
-          </li>
-          <li>
-            <Link className="white opacity-50 flex items-center">
-              <span className="icon lg Gaming"></span>
-              Gaming
-            </Link>
-          </li>
-        </ul>
+        <div className="container">
+          <ul className="sub-nav-wrapper flex justify-center items-center">
+            <li>
+              <Link className="white opacity-50 flex items-center">
+                <span className="icon lg Phones"></span>
+                Phones
+              </Link>
+            </li>
+            <li>
+              <Link className="white opacity-50 flex items-center">
+                <span className="icon lg Computers"></span>
+                Computers
+              </Link>
+            </li>
+            <li>
+              <Link className="white opacity-50 flex items-center">
+                <span className="icon lg Smart"></span>
+                Smart Watches
+              </Link>
+            </li>
+            <li>
+              <Link className="white opacity-50 flex items-center">
+                <span className="icon lg Cameras"></span>
+                Cameras
+              </Link>
+            </li>
+            <li>
+              <Link className="white opacity-50 flex items-center">
+                <span className="icon lg Headphones"></span>
+                Headphones
+              </Link>
+            </li>
+            <li>
+              <Link className="white opacity-50 flex items-center">
+                <span className="icon lg Gaming"></span>
+                Gaming
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
   );
