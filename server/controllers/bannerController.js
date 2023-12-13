@@ -21,6 +21,6 @@ exports.postAddBanner = async (req, res) => {
 };
 
 exports.getFindAllBanners = async (req, res) => {
-  const banners = await BannerModel.find({}).sort({ createdAt: -1 }).limit(5);
+  const banners = await BannerModel.find({});
   res.json(banners);
 };
