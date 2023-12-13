@@ -5,10 +5,11 @@ exports.getAddBanner = (req, res) => {
 };
 
 exports.postAddBanner = async (req, res) => {
-  req.body.topBanner = req.body.topBanner == "on";
-  if (req.body.topBanner) {
+  const sequence = req.body.sequence;
+  const banner = await BannerModel.findOne({ sequence }); //find the record where {sequence=1}
+  if (banner) {
     await BannerModel.findOneAndUpdate(
-      { topBanner: req.body.topBanner },
+      { sequence },
       { ...req.body, bannerUrl: req.file.filename }
     );
   } else {
