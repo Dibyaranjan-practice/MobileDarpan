@@ -22,6 +22,7 @@ const upload = multer({
     },
   }),
 });
+
 app.use("/api", apiRoutes);
 app.use("/banner", upload.single("bannerUrl"), bannerRoutes);
 
