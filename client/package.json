@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "node-sass --watch src/css/scss/ -o src/css/"
+    "sass": "node-sass --watch src/css/scss/ -o src/css/",
+    "buildcss": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
   },
   "eslintConfig": {
     "extends": [
