@@ -29,11 +29,26 @@
 .grey-200 {
   color: #cfcfcf; }
 
+.grey-300 {
+  background-color: #ededed; }
+
 .black {
   background-color: #2e2e2e; }
 
 .dark-black {
   background-color: #000; }
+
+.text-dark-black {
+  color: #000; }
+
+.sf-font-regular {
+  font-family: "SF Pro Display Regular"; }
+
+.sf-font-medium {
+  font-family: "SF Pro Display Medium"; }
+
+.sf-font-bold {
+  font-family: "SF Pro Display Bold"; }
 
 .font-size-base {
   font-size: 1rem; }
@@ -79,6 +94,10 @@
     background-image: url("../images/svg/Tiktok.svg"); }
   .icon.instagram {
     background-image: url("../images/svg/Instagram.svg"); }
+  .icon.arrow_left {
+    background-image: url("../images/svg/Arrow_Left.svg"); }
+  .icon.arrow_right {
+    background-image: url("../images/svg/Arrow_Right.svg"); }
 
 .header-wrapper li a {
   color: rgba(0, 0, 0, 0.3); }

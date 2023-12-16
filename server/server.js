@@ -6,18 +6,22 @@ require("dotenv").config();
 require("./utils/db");
 const multer = require("multer");
 const crypto = require("crypto");
+const cors = require("cors");
 
 const apiRoutes = require("./routes/apiRoutes");
 const bannerRoutes = require("./routes/bannerRoutes");
 const productRoutes = require("./routes/productRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
 const app = express();
 
 app.use(cors({ origin: "http://localhost:3000" }));
 
+app.use("/public", express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors());
 const upload = multer({
   storage: multer.diskStorage({
     destination: (req, file, cb) => {
@@ -31,6 +35,7 @@ const upload = multer({
 app.use("/api", apiRoutes);
 app.use("/banner", upload.single("bannerUrl"), bannerRoutes);
 app.use("/product", upload.single("imageUrl"), productRoutes);
+app.use("/category", upload.single("imageUrl"), categoryRoutes);
 
 app.listen(5000, () => {
   console.log("Server running on 5000");
