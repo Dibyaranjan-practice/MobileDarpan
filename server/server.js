@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
 require("ejs");
 require("dotenv").config();
 require("./utils/db");
@@ -12,6 +13,8 @@ const bannerRoutes = require("./routes/bannerRoutes");
 const productRoutes = require("./routes/productRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
 const app = express();
+
+app.use(cors({ origin: "http://localhost:3000" }));
 
 app.use("/public", express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "public")));
