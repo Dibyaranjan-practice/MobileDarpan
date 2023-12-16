@@ -6,7 +6,6 @@ require("dotenv").config();
 require("./utils/db");
 const multer = require("multer");
 const crypto = require("crypto");
-const cors = require("cors");
 
 const apiRoutes = require("./routes/apiRoutes");
 const bannerRoutes = require("./routes/bannerRoutes");
