@@ -7,6 +7,7 @@ exports.getAddBanner = (req, res) => {
 exports.postAddBanner = async (req, res) => {
   const sequence = req.body.sequence;
   const banner = await BannerModel.findOne({ sequence }); //find the record where {sequence=1}
+  console.log(banner);
   if (banner) {
     await BannerModel.findOneAndUpdate(
       { sequence },

@@ -5,9 +5,9 @@ const BannerSchema = new mongoose.Schema({
   description: { type: String, required: true },
   title: { type: String, required: true },
   subtitle: { type: String, required: true },
-  sequence: { type: Number },
+  sequence: { type: String },
 });
 
 module.exports = mongoose.model("Banner", BannerSchema);
 //1 2 3 4 5
-1
+1;

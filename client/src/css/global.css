@@ -32,8 +32,14 @@
 .grey-300 {
   background-color: #ededed; }
 
+.grey-400 {
+  color: #909090; }
+
 .black {
   background-color: #2e2e2e; }
+
+.bg-light-black {
+  background-color: #211c24; }
 
 .dark-black {
   background-color: #000; }
