@@ -6,8 +6,7 @@ exports.getAddBanner = (req, res) => {
 
 exports.postAddBanner = async (req, res) => {
   const sequence = req.body.sequence;
-  const banner = await BannerModel.findOne({ sequence }); //find the record where {sequence=1}
-  console.log(banner);
+  const banner = await BannerModel.findOne({ sequence });
   if (banner) {
     await BannerModel.findOneAndUpdate(
       { sequence },
@@ -16,7 +15,7 @@ exports.postAddBanner = async (req, res) => {
   } else {
     await BannerModel.create({ ...req.body, bannerUrl: req.file.filename })
       .then(() => console.log("success"))
-      .catch((error) => console.log("Failed to save", error));
+      .catch((error) => console.log("Failed to save", error.message));
   }
   res.render("Banners/addBanner");
 };
