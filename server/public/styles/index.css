@@ -1,0 +1,25 @@
+* {
+  font-family: sans-serif;
+}
+.product-form-wrapper {
+  background-color: #cfcfcf;
+  padding: 1rem;
+}
+.bg-grey {
+  background-color: #cfcfcf;
+  padding: 1rem;
+}
+input,
+select,
+textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+  width: 90%;
+}
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
