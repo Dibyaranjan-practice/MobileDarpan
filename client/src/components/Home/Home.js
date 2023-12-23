@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <MainBanner />
-      {/* <Category /> */}
+      <Category />
     </>
   );
 }

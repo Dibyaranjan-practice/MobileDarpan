@@ -47,6 +47,7 @@ $black: #2e2e2e;
 $white: #fff;
 $dark-black: #000;
 $light-black: #211c24;
+$mellow-black: #353535;
 
 .grey-100 {
   background-color: $grey-100;
@@ -67,7 +68,12 @@ $light-black: #211c24;
 .bg-light-black {
   background-color: $light-black;
 }
-
+.bg-white {
+  background-color: $white;
+}
+.bg-mellow-black {
+  background-color: $mellow-black;
+}
 .dark-black {
   background-color: $dark-black;
 }

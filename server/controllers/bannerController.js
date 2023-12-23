@@ -10,10 +10,18 @@ exports.postAddBanner = async (req, res) => {
   if (banner) {
     await BannerModel.findOneAndUpdate(
       { sequence },
-      { ...req.body, bannerUrl: req.file.filename }
+      {
+        ...req.body,
+        bannerUrl: req.files["bannerUrl"][0].filename,
+        MobBannerUrl: req.files["MobBannerUrl"][0].filename,
+      }
     );
   } else {
-    await BannerModel.create({ ...req.body, bannerUrl: req.file.filename })
+    await BannerModel.create({
+      ...req.body,
+      bannerUrl: req.files["bannerUrl"][0].filename,
+      MobBannerUrl: req.files["MobBannerUrl"][0].filename,
+    })
       .then(() => console.log("success"))
       .catch((error) => console.log("Failed to save", error.message));
   }

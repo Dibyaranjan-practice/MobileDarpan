@@ -32,7 +32,18 @@ const upload = multer({
   }),
 });
 app.use("/api", apiRoutes);
-app.use("/banner", upload.single("bannerUrl"), bannerRoutes);
+app.use(
+  "/banner",
+  upload.fields([
+    {
+      name: "bannerUrl",
+    },
+    {
+      name: "MobBannerUrl",
+    },
+  ]),
+  bannerRoutes
+);
 app.use("/product", upload.single("imageUrl"), productRoutes);
 app.use("/category", upload.single("imageUrl"), categoryRoutes);
 
