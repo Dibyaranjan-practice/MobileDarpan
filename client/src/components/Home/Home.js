@@ -9,6 +9,7 @@ export default function Home() {
       <MainBanner />
       <Category />
       <FourthBanner />
+      <Category />
     </>
   );
 }

@@ -47,6 +47,12 @@
 .bg-black-darkblack {
   background: linear-gradient(to right, #2e2e2e 50%, #000 60%, #000 70%, #000 100%); }
 
+.bg-white {
+  background-color: #fff; }
+
+.bg-mellow-black {
+  background-color: #353535; }
+
 .dark-black {
   background-color: #000; }
 

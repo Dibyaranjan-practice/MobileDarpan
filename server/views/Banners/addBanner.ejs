@@ -13,27 +13,41 @@
       action="/banner/add"
       class="bg-grey"
     >
-      <label for="title">Title</label>
-      <input type="text" name="title" />
-      <label for="subtitle">Sub Title</label>
-      <input type="text" name="subtitle" />
-      <label for="description">Description</label>
-      <textarea rows="5" cols="10" name="description"></textarea>
-      <label for="bannerUrl">BannerUrl</label>
-      <input type="file" name="bannerUrl" accept="image/*" />
-      <label for="sequence">Sequence</label>
-      <select name="sequence">
-        <option value="main_banner_1" default>main_banner_1</option>
-        <option value="sub_banner_1">sub_banner_1</option>
-        <option value="sub_banner_2">sub_banner_2</option>
-        <option value="sub_banner_3">sub_banner_3</option>
-        <option value="sub_banner_4">sub_banner_4</option>
-        <option value="third_banner_1">third_banner_1</option>
-        <option value="third_banner_2">third_banner_2</option>
-        <option value="third_banner_3">third_banner_3</option>
-        <option value="third_banner_4">third_banner_4</option>
-        <option value="fourth_banner_1">fourth_banner_1</option>
-      </select>
+      <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" />
+      </div>
+      <div>
+        <label for="subtitle">Sub Title</label>
+        <input type="text" name="subtitle" />
+      </div>
+      <div>
+        <label for="description">Description</label>
+        <textarea rows="5" cols="10" name="description"></textarea>
+      </div>
+      <div>
+        <label for="bannerUrl">BannerUrl</label>
+        <input type="file" name="bannerUrl" accept="image/*" />
+      </div>
+      <div>
+        <label for="MobBannerUrl">MobBannerUrl</label>
+        <input type="file" name="MobBannerUrl" accept="image/*" />
+      </div>
+      <div>
+        <label for="sequence">Sequence</label>
+        <select name="sequence">
+          <option value="main_banner_1" default>main_banner_1</option>
+          <option value="sub_banner_1">sub_banner_1</option>
+          <option value="sub_banner_2">sub_banner_2</option>
+          <option value="sub_banner_3">sub_banner_3</option>
+          <option value="sub_banner_4">sub_banner_4</option>
+          <option value="third_banner_1">third_banner_1</option>
+          <option value="third_banner_2">third_banner_2</option>
+          <option value="third_banner_3">third_banner_3</option>
+          <option value="third_banner_4">third_banner_4</option>
+          <option value="fourth_banner_1">fourth_banner_1</option>
+        </select>
+      </div>
       <input type="submit" value="Save" />
     </form>
   </body>
