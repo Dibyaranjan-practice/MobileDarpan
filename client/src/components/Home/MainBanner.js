@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { BASE_URL, IMG_URL } from "../../Constant";
 import Stealthbutton from "../main/Stealthbutton";
 
@@ -13,7 +13,6 @@ function MainBanner() {
     const bannerFunction = async function () {
       const response = await fetch(BASE_URL + "Api/banner/findall");
       const data = await response.json();
-      console.log(data);
       setBanner(data);
     };
 

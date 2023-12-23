@@ -9,5 +9,4 @@ const BannerSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("Banner", BannerSchema);
-//1 2 3 4 5
-1;
+

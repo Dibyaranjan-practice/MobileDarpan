@@ -35,11 +35,17 @@
 .grey-400 {
   color: #909090; }
 
+.text-grey-500 {
+  color: #787878; }
+
 .black {
   background-color: #2e2e2e; }
 
 .bg-light-black {
   background-color: #211c24; }
+
+.bg-black-darkblack {
+  background: linear-gradient(to right, #2e2e2e 50%, #000 60%, #000 70%, #000 100%); }
 
 .dark-black {
   background-color: #000; }

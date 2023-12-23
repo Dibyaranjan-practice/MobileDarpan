@@ -1,7 +1,10 @@
 import "./css/output.css";
 import "./css/global.css";
+import { useEffect } from "react";
 import Header from "./components/main/Header.js";
 import { Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { fetchBanners } from "./utils/slices/bannerSlice";
 import Home from "./components/Home/Home";
 import About from "./components/About";
 import Blog from "./components/Blog";
@@ -11,6 +14,10 @@ import Profile from "./components/Profile";
 import Wishlist from "./components/Wishlist";
 import Footer from "./components/main/Footer";
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchBanners());
+  }, [dispatch]);
   return (
     <>
       <Header />

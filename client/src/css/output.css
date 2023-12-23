@@ -551,6 +551,26 @@ video {
   }
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
 .mx-\[2rem\] {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -566,6 +586,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.mb-\[1rem\] {
+  margin-bottom: 1rem;
+}
+
 .ml-\[2rem\] {
   margin-left: 2rem;
 }
@@ -578,12 +602,16 @@ video {
   margin-top: 2rem;
 }
 
-.mb-\[1\.5rem\] {
-  margin-bottom: 1.5rem;
+.ml-\[50\%\] {
+  margin-left: 50%;
 }
 
-.mb-\[1rem\] {
-  margin-bottom: 1rem;
+.ml-\[5\%\] {
+  margin-left: 5%;
+}
+
+.ml-\[25\%\] {
+  margin-left: 25%;
 }
 
 .inline-block {
@@ -610,6 +638,18 @@ video {
   height: 56px;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
+.h-\[28rem\] {
+  height: 28rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .w-\[100\%\] {
   width: 100%;
 }
@@ -618,12 +658,20 @@ video {
   width: 160px;
 }
 
+.w-\[184px\] {
+  width: 184px;
+}
+
 .w-\[40\%\] {
   width: 40%;
 }
 
-.w-\[184px\] {
-  width: 184px;
+.w-full {
+  width: 100%;
+}
+
+.w-1 {
+  width: 0.25rem;
 }
 
 .grid-cols-1 {
@@ -687,6 +735,26 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.object-fill {
+  object-fit: fill;
+}
+
 .p-\[1rem\] {
   padding: 1rem;
 }
@@ -726,19 +794,9 @@ video {
   text-align: center;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-4xl {
@@ -746,9 +804,9 @@ video {
   line-height: 2.5rem;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-lg {
@@ -756,12 +814,24 @@ video {
   line-height: 1.75rem;
 }
 
+.text-\[4\.5rem\] {
+  font-size: 4.5rem;
+}
+
+.text-\[1rem\] {
+  font-size: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
-.font-light {
-  font-weight: 300;
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .text-white {
@@ -769,16 +839,12 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-inherit {
-  color: inherit;
+.opacity-40 {
+  opacity: 0.4;
 }
 
 .opacity-50 {
   opacity: 0.5;
-}
-
-.opacity-40 {
-  opacity: 0.4;
 }
 
 @media (min-width: 768px) {
