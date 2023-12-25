@@ -16,7 +16,6 @@ exports.postAddCategory = (req, res) => {
 exports.getFindAll = (req, res) => {
   CategoryModel.find({})
     .sort({ createdAt: -1 })
-    .limit(6)
     .then((result) => res.status(200).json(result))
     .catch((error) =>
       res.status(500).json({ status: "failed", msg: "some error occured" })
