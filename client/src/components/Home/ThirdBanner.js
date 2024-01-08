@@ -10,7 +10,7 @@ function ThirdBanner() {
   const fourth = banners["third_banner_4"];
 
   return (
-    <div className="third-banner-container w-full hidden lg:flex h-[40rem] ">
+    <div className="third-banner-container w-full hidden md:flex h-[40rem] ">
       {first && (
         <ThirdBannerItem
           url={first.bannerUrl}

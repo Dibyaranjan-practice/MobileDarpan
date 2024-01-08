@@ -5,11 +5,11 @@ import Stealthbutton from "./../main/Stealthbutton";
 function ThirdBannerItem({ url, title, subtitle, className, btnColor }) {
   return (
     <div className={className + " third_banner_item w-1/4 flex flex-col"}>
-      <div className=" banner_image w-full h-[425px]">
+      <div className=" banner_image w-full h-[26.5rem]">
         <img
           src={BASE_URL + "assets/images/" + url}
           alt="banner_logo"
-          className="object-cover object-left w-full h-full"
+          className="object-cover object-left h-full"
         />
       </div>
       <div className="content flex flex-col gap-4 w-full h-[13rem] px-8">
