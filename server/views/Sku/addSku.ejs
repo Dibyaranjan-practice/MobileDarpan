@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Sku</title>
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data" action="/sku/add">
+      <div class="product">
+        <label for="product">Product</label>
+        <select id="product" name="product"></select>
+      </div>
+      <div id="sku" class="sku"></div>
+      <button type="submit">Save</button>
+    </form>
+    <script src="/scripts/Sku/addSku.js"></script>
+  </body>
+</html>
