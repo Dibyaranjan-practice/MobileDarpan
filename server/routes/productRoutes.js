@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const MainProductController = require("./../controllers/MainProductController");
+const ProductController = require("./../controllers/productController");
 
-router.get("/add", MainProductController.getAddMainProduct);
-router.post("/add", MainProductController.postAddMainProduct);
-router.get("/findall", MainProductController.getFindAll);
-router.get("/category/:type", MainProductController.getFindByCategory);
-router.get("/:id", MainProductController.getFindById);
+router.get("/add", ProductController.getAddProduct);
+router.post("/add", ProductController.postAddProduct);
+router.get("/all", ProductController.getAll);
+router.get("/category/:type", ProductController.getFindByCategory);
+router.get("/:id", ProductController.getFindById);
 
 module.exports = router;

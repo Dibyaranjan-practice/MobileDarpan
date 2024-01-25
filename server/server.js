@@ -11,6 +11,8 @@ const apiRoutes = require("./routes/apiRoutes");
 const bannerRoutes = require("./routes/bannerRoutes");
 const productRoutes = require("./routes/productRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
+const brandRoutes = require("./routes/brandRoutes");
+const skuRoutes = require("./routes/skuRoutes");
 const app = express();
 
 app.use(cors({ origin: "http://localhost:3000" }));
@@ -46,6 +48,8 @@ app.use(
 );
 app.use("/product", upload.single("imageUrl"), productRoutes);
 app.use("/category", upload.single("imageUrl"), categoryRoutes);
+app.use("/brand", brandRoutes);
+app.use("/sku", upload.single("imageUrl"), skuRoutes);
 
 app.listen(5000, () => {
   console.log("Server running on 5000");

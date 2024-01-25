@@ -10,7 +10,7 @@ function ThirdBanner() {
   const fourth = banners["third_banner_4"];
 
   return (
-    <div className="third-banner-container w-full hidden md:flex h-[40rem] ">
+    <div className="third-banner-container w-full flex flex-wrap ">
       {first && (
         <ThirdBannerItem
           url={first.bannerUrl}
@@ -18,6 +18,7 @@ function ThirdBanner() {
           subtitle={first.subtitle}
           className="bg-white"
           btnColor="border-black text-black"
+          imageAlign="object-center"
         />
       )}
       {second && (
@@ -27,6 +28,7 @@ function ThirdBanner() {
           subtitle={second.subtitle}
           className="bg-grey-600"
           btnColor="border-black text-black"
+          imageAlign="object-right"
         />
       )}
       {third && (
@@ -36,6 +38,7 @@ function ThirdBanner() {
           subtitle={third.subtitle}
           className="bg-grey-700"
           btnColor="border-black text-black"
+          imageAlign="object-center"
         />
       )}
       {fourth && (
@@ -45,6 +48,7 @@ function ThirdBanner() {
           subtitle={fourth.subtitle}
           className="bg-dark-grey text-white"
           btnColor="border-white text-white"
+          imageAlign="object-right"
         />
       )}
     </div>

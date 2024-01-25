@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Brand</title>
+  </head>
+  <body>
+    <form method="POST" action="/brand/add">
+      <div class="name">
+        <label for="name">Name</label>
+        <input type="text" name="name" required />
+      </div>
+      <div class="release">
+        <label for="release">Release Year</label>
+        <select id="release" name="release"></select>
+      </div>
+      <button type="submit">Save</button>
+      <button type="cancel">Cancel</button>
+    </form>
+    <script>
+      const release = document.getElementById("release");
+      let text = "";
+      const curYear = new Date().getFullYear();
+      for (let i = 1900; i < 2050; i++) {
+        text =
+          text +
+          `<option value=${i} ${i === curYear ? "selected" : ""}>${i}</option>`;
+      }
+      release.innerHTML = text;
+    </script>
+  </body>
+</html>
