@@ -9,7 +9,6 @@ const CategorySchema = new mongoose.Schema({
   title: { type: String, required: true },
   description: { type: String, require: true },
   imageUrl: { type: String, require: true },
-  fields: { type: Object },
 });
 
 const CategoryModel = mongoose.model("Category", CategorySchema);

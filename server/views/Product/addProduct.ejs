@@ -21,11 +21,22 @@
       </div>
       <div class="category">
         <label for="category">Category</label>
-        <select name="category" id="category" required>
-          
-        </select>
+        <select name="category" id="category" required></select>
       </div>
-      <div class="fields"></div>
+      <div class="tag">
+        <label for="tag">Tag</label>
+        <input type="text" name="tag" />
+      </div>
+      <div class="extracategory">
+        <label for="extraCategories">Extra Categories</label>
+        <select name="extraCategories" id="extraCategories" required></select>
+      </div>
+      <div class="fields">
+        <label for="fields">Required Fields</label>
+        <div id="add_fields"></div>
+        <button type="button" onClick="addfields()">Add</button>
+      </div>
+
       <button type="submit">Save</button>
     </form>
     <script src="/scripts/Product/addProduct.js"></script>

@@ -13,11 +13,22 @@ exports.postAddProduct = async (req, res) => {
   req.body.category = await CategoryModel.findOne({
     title: req.body.category,
   }).select("_id");
+  let props = { ...req.body };
+  const fields = {};
+  let i = 1;
+  while (true) {
+    let fieldName = "field" + i,
+      typeName = "type" + i;
+    if (props.hasOwnProperty(fieldName)) {
+      fields[props[fieldName]] = props[typeName];
+    } else {
+      break;
+    }
+    i += 1;
+  }
   return ProductModel.create({
-    brand: req.body.brand,
-    category: req.body.category,
-    title: req.body.title,
-    description: req.body.description,
+    ...req.body,
+    fields,
   })
     .then(() => {
       res.render("Product/addProduct");
@@ -48,6 +59,15 @@ exports.getFindById = (req, res) => {
   ProductModel.findById(id)
     .then((product) => {
       res.status(200).json(product);
+    })
+    .catch((error) => res.status(500).json({ msg: "some error occured" }));
+};
+
+exports.getFindByTag = (req, res) => {
+  const tag = req.params.tag;
+  ProductModel.find({ tag })
+    .then((products) => {
+      res.status(200).json(products);
     })
     .catch((error) => res.status(500).json({ msg: "some error occured" }));
 };

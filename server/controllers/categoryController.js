@@ -4,19 +4,6 @@ exports.getAddCategory = (req, res) => {
   res.status(200).render("Category/addCategory");
 };
 exports.postAddCategory = (req, res) => {
-  let props = { ...req.body };
-  const fields = {};
-  let i = 1;
-  while (true) {
-    let fieldName = "field" + i,
-      typeName = "type" + i;
-    if (props.hasOwnProperty(fieldName)) {
-      fields[props[fieldName]] = props[typeName];
-    } else {
-      break;
-    }
-    i += 1;
-  }
   req.body.imageUrl = req.file.filename;
 
   CategoryModel.create({ ...req.body, fields })
